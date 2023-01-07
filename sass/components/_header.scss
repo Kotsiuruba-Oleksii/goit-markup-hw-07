@@ -1,0 +1,85 @@
+// ========= Шапка сайта ========= */
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ececec;
+
+  background-color: #ffffff;
+}
+
+//* flex i вирiвняти елементи меню по центру */
+.header .container,
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  margin-left: 93px;
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link {
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.nav__link.nav__link--current::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  bottom: -33px;
+  background-color: var(--accent-color);
+}
+.header-contact {
+  &__list {
+    display: flex;
+    margin-left: auto;
+  }
+
+  // * margin-right: 50px для всiх крiм останого елемента меню */
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
+
+.nav__link:hover,
+.nav__link:focus,
+.header-contact__link:hover,
+.header-contact__link:focus {
+  color: var(--accent-color);
+}
+
+.nav__link.nav__link--current {
+  color: var(--accent-color);
+}

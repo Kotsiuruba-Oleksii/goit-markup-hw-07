@@ -1,0 +1,27 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--title-text-color);
+}
+//* прибираємо точки списків */
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+//* скидаємо margin */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+//* прибираємо підкреслення посилань */
+.link {
+  text-decoration: none;
+}
