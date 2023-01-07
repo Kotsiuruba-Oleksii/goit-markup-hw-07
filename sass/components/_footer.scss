@@ -113,8 +113,11 @@
 
   color: #ffffff;
 }
-.footer-submit__form {
-  display: flex;
+
+.footer-submit {
+  &__form {
+    display: flex;
+  }
 
   &-label {
   }
